@@ -2,6 +2,8 @@
 
 import { TicketBooth } from "./TicketBooth.js"
 import { RideTicketHolders } from "./rides/RideTicketHolders.js";
+import { FoodTicketHolders } from "./rides/FoodTicketHolder.js";
 TicketBooth();
 
 RideTicketHolders();
+FoodTicketHolders();
