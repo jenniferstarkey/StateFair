@@ -6,7 +6,7 @@ export const RideTicketHolders = () => {
         contentTarget.innerHTML += 
         `<div class="person rider"></div>
         <div class="person"></div> 
-        <div class="rider></div>`
+        <div class="rider"></div>`
     
 }
     )}

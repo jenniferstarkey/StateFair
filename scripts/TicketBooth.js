@@ -1,6 +1,8 @@
 const contentTarget = document.querySelector(".entry")
 const eventHub = document.querySelector("#state-fair")
 
+
+//RIDE TICKET EVENT 
 eventHub.addEventListener("click", event =>{
     const customEvent = event.target
         if(customEvent.id === "rideTicket"){
@@ -11,9 +13,10 @@ eventHub.addEventListener("click", event =>{
     }
 )
 
+//FOOD TICKET EVENT 
 eventHub.addEventListener("click", event =>{
     const customEvent = event.target
-    if( customEvent.is === "foodTicket"){
+    if( customEvent.id === "foodTicket"){
         const foodEvent = new CustomEvent("foodPurchased", {
 
         })
