@@ -24,11 +24,34 @@ eventHub.addEventListener("click", event =>{
     }
 })
 
+//GAME TICKET EVENT
+eventHub.addEventListener("click", event =>{
+    const customEvent = event.target
+    if( customEvent.id === "gameTicket"){
+        const gameEvent = new CustomEvent("gamePurchased", {
+        })
+        eventHub.dispatchEvent(gameEvent)
+    }
+})
+//SIDESHOW TICKET EVENT
+
+eventHub.addEventListener("click", event =>{
+    const customEvent =event.target
+    if(customEvent.id ==="sideshowTicket"){
+        const showEvent = new CustomEvent("showPurchased", {
+                })
+            eventHub.dispatchEvent(showEvent)
+            }
+})
+
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
         <div class="ticketBooth">
         <button id="rideTicket">Ride Ticket</button>
         <button id="foodTicket">Food Ticket</button>
+        <button id="gameTicket">Game Ticket</button>
+        <button id="sideshowTicket">Sideshow Ticket</button>
+
         </div>
     `
 }
