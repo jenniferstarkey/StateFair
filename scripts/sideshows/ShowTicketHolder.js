@@ -3,10 +3,7 @@ const eventHub = document.querySelector("#state-fair")
 
 export const ShowTicketHolders = () => {
     eventHub.addEventListener("showPurchased", customEvent => {
-        contentTarget.innerHTML += 
-        `<div class="person gawker"></div>
-        <div class="person"></div> 
-        <div class="gawker"></div>`
+        contentTarget.innerHTML += `<div class="person gawker"></div>`
     
 }
     )}

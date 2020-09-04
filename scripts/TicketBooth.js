@@ -17,9 +17,7 @@ eventHub.addEventListener("click", event =>{
 eventHub.addEventListener("click", event =>{
     const customEvent = event.target
     if( customEvent.id === "foodTicket"){
-        const foodEvent = new CustomEvent("foodPurchased", {
-
-        })
+        const foodEvent = new CustomEvent("foodPurchased")
         eventHub.dispatchEvent(foodEvent)
     }
 })
@@ -28,8 +26,7 @@ eventHub.addEventListener("click", event =>{
 eventHub.addEventListener("click", event =>{
     const customEvent = event.target
     if( customEvent.id === "gameTicket"){
-        const gameEvent = new CustomEvent("gamePurchased", {
-        })
+        const gameEvent = new CustomEvent("gamePurchased")
         eventHub.dispatchEvent(gameEvent)
     }
 })
@@ -44,6 +41,21 @@ eventHub.addEventListener("click", event =>{
             }
 })
 
+
+//FULL PACKAGE EVENT
+
+
+eventHub.addEventListener("click", event => {
+    const customEvent = event.target 
+    if( customEvent.id === "pkgTicket"){
+        const pkgEvent = new CustomEvent("pkgPurchased",{
+
+        })
+        eventHub.dispatchEvent(pkgEvent)
+        // console.log("package Tixxx")
+    }
+})
+
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
         <div class="ticketBooth">
@@ -51,6 +63,8 @@ export const TicketBooth = () => {
         <button id="foodTicket">Food Ticket</button>
         <button id="gameTicket">Game Ticket</button>
         <button id="sideshowTicket">Sideshow Ticket</button>
+        <button id="pkgTicket">Full Package Ticket</button>
+
 
         </div>
     `
